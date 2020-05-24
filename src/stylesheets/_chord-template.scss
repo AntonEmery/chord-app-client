@@ -1,0 +1,34 @@
+
+.chords {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    width: 4rem;
+  }
+
+  &__template {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    align-items: center;
+  }
+
+  &__name {
+    margin-bottom: .25rem;
+    display: inline-block;
+  }
+
+  &__input-title {
+    width: 3rem;
+  }
+}
+
+.chord-sheet {
+  &__title {
+    width: 5rem;
+  }
+}

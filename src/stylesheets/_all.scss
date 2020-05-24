@@ -1,0 +1,72 @@
+@import "variables.scss";
+@import "type.scss";
+@import "forms.scss";
+@import "buttons.scss";
+@import "nav.scss";
+@import "chord-template.scss";
+@import "chord-sheets.scss";
+
+
+// temp styles while things get reorganized
+
+#root {
+  padding: 1rem 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Chord Sheet */
+.chord-sheet {
+
+  &__wrapper {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  &__app-title {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Chord Sheet main */
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.invisible:hover {
+  opacity: .5 !important;
+}
+
+/* Chord Template */
+
+
+.button-delete {
+  border-radius: 4px;
+  background: rgb(66, 184, 221);
+  font-size: 70%;
+  margin-bottom: 3px;
+}
+
+header {
+  text-align:center;
+  padding-bottom: 20px;
+}
+
+
+
+/* Menu Bar */
+.menu-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+
