@@ -18,7 +18,7 @@ class ChordSheet extends Component {
     this.numOfStringsAsArray = Util.fillArrayWithNumbers(this.numOfStrings)
     // Set state
     this.state = {
-      title: 'untitled',
+      title: 'Chord Sheet Title',
       chords: [
         { 0: undefined, 1: undefined, 2: undefined, 3: undefined, 4: undefined, 5: undefined, name: 'Chord Name' },
       ]
@@ -79,18 +79,17 @@ class ChordSheet extends Component {
       <div className="chord-sheet__wrapper">
         <div className="chord-sheet__app-title">
           <h2>Chord App</h2>
-          <p>Github Repo</p>
+          <a href="https://github.com/AntonEmery/chord-app-client" target="_blank" rel="noopener noreferrer">Github Repo</a>
         </div>
-        <ToolBar
-          addChord={this.addChord}
-        />
-        <p>Chord Sheet Title</p>
         <ToggleInput
           setName={this.updateSheetTitle}
-          className="chords__title"
+          className="chord-sheet__title"
           name={this.state.title}
           inputName='chord-sheet__title'
           id={this.props.id}
+        />
+         <ToolBar
+          addChord={this.addChord}
         />
         <div className="chords__container">
           {this.state.chords.map((chord, index) => {
