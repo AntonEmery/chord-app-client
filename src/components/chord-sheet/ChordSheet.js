@@ -81,29 +81,32 @@ class ChordSheet extends Component {
           <h2>Chord App</h2>
           <a href="https://github.com/AntonEmery/chord-app-client" target="_blank" rel="noopener noreferrer">Github Repo</a>
         </div>
-        <ToggleInput
-          setName={this.updateSheetTitle}
-          className="chord-sheet__title"
-          name={this.state.title}
-          inputName='chord-sheet__title'
-          id={this.props.id}
-        />
-         <ToolBar
-          addChord={this.addChord}
-        />
-        <div className="chords__container">
-          {this.state.chords.map((chord, index) => {
-            return (
-              <ChordTemplate
+
+         <ToolBar addChord={this.addChord} />
+        <div className="chord-sheet__container">
+          <div className="chord-sheet__title-container">
+            <ToggleInput
+              setName={this.updateSheetTitle}
+              className="chord-sheet__title"
+              name={this.state.title}
+              inputName='chord-sheet__title'
+              id={this.props.id}
+              />
+          </div>
+          <div className="chords__container">
+            {this.state.chords.map((chord, index) => {
+              return (
+                <ChordTemplate
                 updateChordName={this.updateChordName}
                 key={index}
                 id={index}
                 state={chord}
                 toggleVisibility={this.toggleVisibility}
                 deleteChord={this.deleteChord}
-              />
-            )
-          })}
+                />
+                )
+              })}
+          </div>
         </div>
       </div>
     )
