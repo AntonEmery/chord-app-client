@@ -42,7 +42,7 @@ class ChordTemplate extends Component {
   drawDots() {
     return this.numOfStringsAsArray.slice(0).map((string) => {
       return this.numOfStringsAsArray.slice(0).map((fret) => {
-        return <GuitarCircle isVisible={this.props.state[string] === fret}
+        return <GuitarCircle key={fret} isVisible={this.props.state[string] === fret}
           onClick={this.props.toggleVisibility.bind(null, this.id, string, fret)}
           string={string} fret={fret}
         />
